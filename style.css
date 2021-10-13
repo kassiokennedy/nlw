@@ -57,6 +57,7 @@ h1 {
 .divider-1 {
   height: 1px;
   background: linear-gradient(
+    270deg,
     hsla(var(--hue), 36%, 57%, 1) 0%,
     hsla(var(--hue), 65%, 88%, 0.34) 100%
   );
@@ -92,6 +93,7 @@ nav {
   display: flex; /*  deixa as opcoes lado a lado */
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 .logo {
   font: 700 1.31rem 'Poppins', sans-serif;
