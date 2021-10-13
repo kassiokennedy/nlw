@@ -13,6 +13,7 @@ img {
 }
 /* ====  variable ======== */
 :root {
+  --header-height: 4.5rem;
   --hue: 159;
   /* HSL color mode */
   --base-color: hsl(var(--hue) 36% 57%);
@@ -40,17 +41,54 @@ h1 {
   -webkit-font-smoothing: auto;
 }
 .button {
-  background-color: var(--base-color);
+  background-color: var(--base-color); /* cor de fundo do botao */
+  color: var(--text-color-light);
+  height: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 2rem;
+  border-radius: 0.25rem;
+  font: 500 1rem 'DM Sans', sans-serif;
+  transition: background 0.3s;
+}
+.button:hover {
+  background: var(--base-color-alt);
+}
+.divider-1 {
+  height: 1px;
+  background: linear-gradient(
+    hsla(var(--hue), 36%, 57%, 1) 0%,
+    hsla(var(--hue), 65%, 88%, 0.34) 100%
+  );
+}
+/* ==== Layout */
+#home .text {
+  margin-left: 1.5em;
+  margin-right: 1.5rem;
+  text-align: center;
+}
+#home .text h1 {
+  margin-bottom: 1rem;
+}
+#home .text p {
+  margin-bottom: 2rem;
+  max-width: 100%;
 }
 
-/* ==== Layout */
 #header {
   border-bottom: 1px solid #e4e4e4;
   margin-bottom: 2rem;
+  display: flex;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 100;
+  background-color: var(--body-color);
 }
 
 nav {
-  height: 4.5rem;
+  height: var(--header-height);
   display: flex; /*  deixa as opcoes lado a lado */
   align-items: center;
   justify-content: space-between;
@@ -62,9 +100,10 @@ nav {
 .logo span {
   color: var(--base-color);
 }
-
+main {
+  margin-top: var(--header-height);
+}
 .container {
-  width: 100%;
   margin-left: 1.5em;
   margin-right: 1.5rem;
 }
@@ -76,6 +115,9 @@ nav {
   padding: 5rem 0;
 }
 /*==== container */
+#home {
+  overflow: hidden;
+}
 #home .container {
   margin: 0;
 }
@@ -101,16 +143,4 @@ nav {
 #home .image img {
   position: relative;
   right: 2.93rem;
-}
-
-#home .text {
-  margin-left: 1.5em;
-  margin-right: 1.5rem;
-  text-align: center;
-}
-#home .text h1 {
-  margin-bottom: 1rem;
-}
-#home .text p {
-  margin-bottom: 2rem;
 }
