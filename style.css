@@ -76,6 +76,10 @@ body {
 .section {
   padding: 5rem 0;
 }
+.section .title {
+  margin-bottom: 1rem;
+}
+
 #header {
   border-bottom: 1px solid #e4e4e4;
   margin-bottom: 2rem;
@@ -86,18 +90,6 @@ body {
   position: fixed;
   z-index: 100;
   background-color: var(--body-color);
-}
-#home .text {
-  margin-left: 1.5em;
-  margin-right: 1.5rem;
-  text-align: center;
-}
-#home .text h1 {
-  margin-bottom: 1rem;
-}
-#home .text p {
-  margin-bottom: 2rem;
-  max-width: 100%;
 }
 
 /*-------------- Main---------------------------------------*/
@@ -216,4 +208,49 @@ nav.show div.icon-close {
 #home .image img {
   position: relative;
   right: 2.93rem;
+}
+#home .text {
+  margin-left: 1.5em;
+  margin-right: 1.5rem;
+  text-align: center;
+}
+#home .text h1 {
+  margin-bottom: 1rem;
+}
+#home .text p {
+  margin-bottom: 2rem;
+  max-width: 100%;
+}
+
+/* ---------------------- About --------------------------- */
+#about {
+  background: white;
+}
+#about .container {
+  margin: 0;
+}
+#about .image {
+  position: relative;
+}
+#about .image::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: var(--base-color-second);
+  position: absolute;
+  top: -8.3%;
+  left: -33%;
+  z-index: 0;
+}
+#about .image img {
+  position: relative;
+}
+#about .image img,
+#about .image::before {
+  border-radius: 0.25rem;
+}
+
+#about .text {
+  margin-left: 1.5em;
+  margin-right: 1.5rem;
 }
