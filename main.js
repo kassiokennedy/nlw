@@ -1,4 +1,4 @@
-/* abre e fecha o menu*/
+/* abre e fecha o menu e o x*/
 const nav = document.querySelector('header nav')
 const toggle = document.querySelectorAll('nav .toggle')
 

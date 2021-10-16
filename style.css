@@ -56,12 +56,21 @@ body {
 .button:hover {
   background: var(--base-color-alt);
 }
+/*divider cria divisoes entre as janelas*/
 .divider-1 {
   height: 1px;
   background: linear-gradient(
     270deg,
     hsla(var(--hue), 36%, 57%, 1) 0%,
     hsla(var(--hue), 65%, 88%, 0.34) 100%
+  );
+}
+.divider-2 {
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    hsla(var(--hue), 65%, 88%, 0.34),
+    hsla(var(--hue), 36%, 57%, 1)
   );
 }
 /* ---------------------- Layout--------------------------- */
@@ -121,23 +130,25 @@ nav ul li a {
   transition: color 0.3s;
   position: relative;
 }
+
+/* muda a cor do icone quando passa o mouse em cima*/
 nav ul li a::after {
   content: '';
   width: 0;
-  height: 2px;
-  background: var(--base-color);
+  height: 2px; /*largura da barra que cresse em baixo do menu*/
+  background: var(--base-color); /* cor da barra*/
   position: absolute;
   left: 0;
-  bottom: -1.5rem;
+  bottom: -1.5rem; /* posicao da barra em baixo do nome*/
 }
 nav ul li a:hover::after {
   width: 100%;
   transition: width 0.2s;
 }
-
 nav ul li a:hover {
   color: var(--base-color);
 }
+/*--------------------------------------------------*/
 nav .menu {
   opacity: 0.3;
   visibility: hidden;
