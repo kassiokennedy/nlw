@@ -2,4 +2,4 @@
 
 Curso da Rocketseat
 
-Kassio Kennedy
+Kassio Vieira - outubro de 2021

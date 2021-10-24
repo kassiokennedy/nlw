@@ -1,5 +1,5 @@
 /* abre e fecha o menu e o x*/
-const nav = document.querySelector('header nav')
+const nav = document.querySelector('#header nav')
 const toggle = document.querySelectorAll('nav .toggle')
 
 for (const element of toggle) {
@@ -53,7 +53,17 @@ scrollReveal.reveal(
   #about .image, #about .text,
   #services header, #services .card,
   #testimonials header, #testimonials .testimonials,
-  #contact .text, #contact .links  
+  #contact .text, #contact .links,
+  footer .brand, footer .social
 `,
   { interval: 100 }
 )
+/*-----------back to top-------*/
+const backToTopButton = document.querySelector('.back-to-top')
+window.addEventListener('scroll', function () {
+  if (window.scrollY >= 560) {
+    backToTopButton.classList.add('show')
+  } else {
+    backToTopButton.classList.remove('show')
+  }
+})
