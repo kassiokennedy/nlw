@@ -29,6 +29,9 @@ img {
   /*Fonts*/
   --title-font-size: 1.185rem;
   --subtitle-font-size: 1rem;
+
+  --title-font: 'Poppins', sans-serif;
+  --body-font: 'DM Sans', sans-serif;
 }
 
 /* ==== base ==============*/
@@ -37,14 +40,14 @@ html {
 }
 body {
   /* Texto*/
-  font: 400 1rem 'DM Sans', sans-serif;
+  font: 400 1rem var(--body-font);
   color: var(--text-color);
   background: var(--body-color);
   -webkit-font-smoothing: antialiased;
 }
 .title {
   /* Titulo do texto*/
-  font: 700 1.875rem 'Poppins', sans-serif;
+  font: 700 var(--title-font-size);
   color: var(--title-color);
   -webkit-font-smoothing: auto;
 }
@@ -56,7 +59,7 @@ body {
   align-items: center;
   padding: 0 2rem;
   border-radius: 0.25rem;
-  font: 500 1rem 'DM Sans', sans-serif;
+  font: 500 1rem var(--body-font);
   transition: background 0.3s;
 }
 .button:hover {
@@ -120,7 +123,7 @@ body {
 
 /*--------------LOGO---------------------------------------*/
 .logo {
-  font: 700 1.31rem 'Poppins', sans-serif;
+  font: 700 1.31rem var(--title-font);
   color: var(--title-color);
 }
 .logo span {
@@ -441,13 +444,22 @@ footer .social a {
 /* large devices: >1200 */
 @media (min-width: 1200px) {
   /*-------------- Main---------------------------------------*/
+  .container {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .section {
     padding: 10rem 0;
   }
-  nav .menu {
-    opacity: 1;
-    visibility: visible;
-    top: 0;
+  .button {
+    height: 3.125rem;
+  }
+  .section header {
+    max-width: 32rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
   main {
     margin-top: var(--header-height);
@@ -455,6 +467,34 @@ footer .social a {
   nav .menu ul {
     display: flex;
     gap: 2rem;
+  }
+  nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
+  nav .menu ul li a.title {
+    font: 400 1rem var(--body-font);
+  }
+
+  nav .icon-menu {
+    display: none;
+  }
+  #home .container {
+    grid-auto-flow: column;
+    width: fit-content;
+    justify-content: space-between;
+  }
+  #home .image {
+    order: 1;
+  }
+  #home .text {
+    order: 0;
+    max-width: 24rem;
+    text-align: left;
+  }
+  #about .container {
+    grid-auto-flow: column;
   }
 }
 
