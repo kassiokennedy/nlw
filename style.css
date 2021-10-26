@@ -398,6 +398,9 @@ nav.show div.icon-close {
 footer {
   background: var(--base-color);
 }
+footer.section {
+  padding: 4rem 0;
+}
 footer .logo {
   display: inline-block;
   margin-bottom: 1.5rem;
@@ -438,8 +441,20 @@ footer .social a {
 /* large devices: >1200 */
 @media (min-width: 1200px) {
   /*-------------- Main---------------------------------------*/
+  .section {
+    padding: 10rem 0;
+  }
+  nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
   main {
     margin-top: var(--header-height);
+  }
+  nav .menu ul {
+    display: flex;
+    gap: 2rem;
   }
 }
 
