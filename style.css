@@ -451,16 +451,24 @@ footer .social a {
   .section {
     padding: 10rem 0;
   }
-  nav .menu {
-    opacity: 1;
-    visibility: visible;
-    top: 0;
+  .section header,
+  #testimonials header {
+    max-width: 32rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
+  /* Button */
   .button {
     height: 3.125rem;
   }
 
   /* Navigation */
+  nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
   nav .menu ul {
     display: flex;
     gap: 2rem;
@@ -471,10 +479,9 @@ footer .social a {
   nav .icon-menu {
     display: none;
   }
-  /* home*/
+  /* ------- home*/
   #home .container {
     grid-auto-flow: column;
-
     justify-content: space-between;
     margin: 0 auto;
   }
@@ -485,6 +492,49 @@ footer .social a {
     order: 0;
     max-width: 24rem;
     text-align: left;
+  }
+  /* ------ About*/
+  #about .container {
+    grid-auto-flow: column;
+    margin: 0 auto;
+  }
+  /* Services*/
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .card {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  /* Testimonials */
+  #testimonials .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* contact */
+  #contact .container {
+    grid-auto-flow: column;
+    align-items: center;
+  }
+
+  #contact .text {
+    max-width: 25rem;
+  }
+
+  /* Footer */
+  footer.section {
+    padding-right: 3.75rem 0;
+  }
+  footer .container {
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  footer .logo {
+    font-size: 2.25rem;
   }
 
   /*-------------- Main---------------------------------------*/

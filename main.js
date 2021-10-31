@@ -37,7 +37,13 @@ const swiper = new Swiper('.swiper-container', {
     el: '.swiper-pagination'
   },
   mousewheel: true,
-  keyboard: true
+  keyboard: true,
+  breakpoints: {
+    767: {
+      slidesPerView: 2,
+      setWrapperSize: true
+    }
+  }
 })
 
 /*ScrollReveal */
@@ -67,3 +73,6 @@ window.addEventListener('scroll', function () {
     backToTopButton.classList.remove('show')
   }
 })
+
+/* menu ativo */
+/* minutio 58 do video */
